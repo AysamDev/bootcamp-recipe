@@ -11,11 +11,23 @@ const reqIngredient = function()
             type:"GET",
             url: `/recipes/${input}`,
             success: (ref) => {
-                renderer.renderIngredients(ref)
+                $('#ingredients-container').empty()
+                console.log(ref)
+                if(ref.length > 0)
+                {
+                    renderer.renderIngredients(ref)
+                }
+                else
+                {
+                    const myerr = $("<div class=err>No result was found,please insert something else.</div>")
+                    $('#ingredients-container').append(myerr)
+                    alert("Insert an relevant ingredient,the ingredient you looked for does not exist")   
+                }
                 },
             error: function(error)
             {
-                alert("Enter an relevant Ingredient, the one you searched was not found")
+                console.log(error)
+                
             }
           });
           
@@ -28,12 +40,13 @@ const reqIngredient = function()
 
 $('#searchIngredient').on('click',function()
 {
+    
     reqIngredient()
 })
 
 $('#ingredients-container').on('click','.image',function()
 {
     const firstIngredient = $(this).siblings('ul').find('li:first')
-    console.log(firstIngredient)
+    console.log(firstIngredient.text())
     alert(firstIngredient.text())
 })

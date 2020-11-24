@@ -8,7 +8,6 @@ class Renderer
 
     renderIngredients(data)
     {
-        $('#ingredients-container').empty()
         const html =  this.templateScript({data})
         $('#ingredients-container').append(html)
     }

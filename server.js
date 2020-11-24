@@ -3,8 +3,6 @@ const bodyParser = require(`body-parser`)
 const path = require('path')
 const urllib = require('urllib')
 
-
-
 const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -24,10 +22,9 @@ app.get('/recipes/:ingredient',function(req,res)
             let container = {}
 
             container.ingredients = m.ingredients
-            container.title = m.title
+            container.title = m.title.toUpperCase()
             container.thumbnail = m.thumbnail
             container.href = m.href
-            console.log(container)
             recipesFound.push(container)
         })
         res.send(recipesFound)

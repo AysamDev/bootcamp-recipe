@@ -55,3 +55,7 @@ a{
     height: 15vmax;
     width: 15vmax;
 }
+.err{
+    font-size: 30px;
+    color: black;
+}
