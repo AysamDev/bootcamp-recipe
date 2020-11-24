@@ -1,0 +1,57 @@
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-size: large;
+    background-color: goldenrod;
+}
+
+#input-me{
+    display: grid;
+    margin-bottom: 1vmax;
+
+}
+#input-ingredient{
+font-size: 120%;
+text-size-adjust: 30px;
+}
+button{
+    border: cornsilk transparent  solid 3px;
+    font-size: large;
+}
+
+#ingredients-container{
+    display: grid;
+    grid-gap: 1vmax;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ingredient-info{
+    display: grid;
+    border-radius: 15px;
+    padding: 1vmax;
+    margin-left: 1vmax;
+    border-color: #98002E;
+    box-shadow: 5px 5px 5px #98002E;
+}
+a{
+    justify-self:center;
+    margin-bottom: 1vmax;
+}
+.jersey
+{
+    justify-self:center;
+    margin-bottom: 2px;
+}
+.list{
+    justify-self: left;
+    align-content:center;
+    margin-top: 10px;
+}
+.image
+{
+    justify-self:center;
+    outline: 3px solid white;
+    opacity: 0.9;
+    border-radius: 2px;
+    height: 15vmax;
+    width: 15vmax;
+}
